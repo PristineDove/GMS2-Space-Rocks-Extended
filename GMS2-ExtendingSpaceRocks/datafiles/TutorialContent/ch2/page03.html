@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<!-- EDIT THIS-->
+		<title>Tutorial - GameMaker First Look - Ch2 - Page 3</title>
+		<!-- DO NOT EDIT THIS-->
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="UTF-8"/>
+		<script type="text/javascript">
+			var changePage = function(){
+				var newPage = document.getElementById("page-select");
+				window.location.replace(newPage.value);
+				}
+		</script>
+
+	</head>
+
+<!-- EDIT THIS - This section is where you can add an index to your tutorial -->
+<body>
+<!-- EDIT THIS - Your Tutorial title -->
+	<h2 style="border-radius:0.5em 0.5em 0 0; margin:0;">Tutorial - First Look</h2>
+<!-- EDIT THIS - Here you list the pages in your tutorial, with the current one at the top -->
+		<div class="head">
+			<select id="page-select" onChange="changePage()">
+					<optgroup label="Ch 2 - Spawning Asteroids">
+					<option value="page03.html">Spawn by Score</option>
+				</optgroup>
+				<optgroup label="---Previous Pages">
+					<optgroup label="CH2 - Extending Space Rocks">
+					<option value="../page01.html"><b>Importing Project Files</b></option>
+					<option value="page02.html">Variables</option>
+					<option value="page03.html">Add Panache Part I</option>
+					<option value="page04.html">Add Panache Part II</option>
+					<option value="page05.html">Add Friction and Max Speed</option>
+						<optgroup label="Ch 2 - Spawning Asteroids">
+					<option value="page01.html">Pick Spawn by Time or Score</option>
+					<option value="page02.html">Spawn by Time</option>
+					</optgroup>
+					</optgroup>
+	
+				</optgroup>
+			</select>
+		</div>
+	
+<!-- EDIT THIS - Main tutorial body goes here -->
+<div class="body-scroll">
+
+<p>
+	If you want to see tutorial in a separate web browser window <a href="gms2tutorials:///openBrowser">click here</a>.
+
+<p style="color:rgb(85, 109, 130)">
+	<b>Spawn by Score</b>
+	<p> 
+	Remember to pick only Spawn by Score or Spawn by Time as these do not work together, it is one or the other.
+
+	<p>
+	First lets remove launching rocks from <tt><b>obj_game: Start Room</b></tt> event.  Comment out calling <tt><b>scr_sqawn_asteroid</b></tt>:
+
+<p>
+	<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/CommentOutLaunchingFromRoomStart.png" alt="Comment out old rock spqwning in obj_game: Start Room event">
+
+<p> 
+	I want to launch two large rocks at the player.  I want to give them time to get used to the controls and playing the game.  I am assuming they have never played a game like this before.  So I will not hit them on the first round.  I want the rocks after they screen wrap once to kill the player if by then can't figoure out how to fly out of the way from the center.  I don't want the player to die right away and I don't want them to be lazy and not every have to fly out of the center of the screen.
+
+<p>
+	<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/FirstWaveAsteroids.png" alt="Launch to rocks at player initially diagram">
+
+<p>
+	We want to do this <b>once</b> based on score.  So we will set a boolean switch and turn it off once we have launched a wave.  Let me demonstrate, open <tt><b>obj_game: Create</b></tt> event and add to the bottom:
+
+<h3><tt><b>obj_game: Create</b></tt> event</h3>
+	<p>
+	<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Wave1Variable.png" alt="Set boolean switch in obj_game: Create event">
+
+<p>
+	We will open <tt><b>obj_game: Step</b></tt> event and add a switch at the bottom of the script within the <tt><b>case == rm_game</b></tt> condition.  What the switch does is it checks to see if a score is reached the switch is not turned on.  Because from now on the scoree will always be <tt><b>>=0</b></tt> and we don't want to change it every frame.  But as soon as we set <tt><b>ast_wave_1</b></tt> to true this entire statement will be false for the rest of the game if we never reset this variable.  
+
+<p>
+		Lets launch the two rocks that we outlined previously.  These will be two <tt><b>spr_asteroid_huge</b></tt> sprites.  
+		
+<p>
+	The first is in the top left corner of the screen which makes it an <tt><b>x_pos</b></tt> of <tt><b>0</b></tt> and <tt><b>y_pos</b></tt> of <tt><b>0</b></tt>.  An angle of -45 would hit the player and we want to miss them so we launch it as <tt><b>-30</b></tt> degrees at its default speed so we multiply it by <tt><b>1</b></tt>.
+
+<p>
+		The second is off the bottom and 3/4 of the way across the screen.which makes it an <tt><b>x_pos</b></tt> of <tt><b>0.75</b></tt> and <tt><b>y_pos</b></tt> of <tt><b>1</b></tt>.  We launch it at an angle of  <tt><b>100</b></tt> degrees at its default speed so we multiply it by <tt><b>1</b></tt>.
+	<h3><tt><b>obj_game: Step</b></tt> event </h3>
+<p>
+	<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/AddFirstWaveToGameStep.png" alt="Launch first two rocks based on score">
+
+
+	<p>
+		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Icon_RunProject.png" alt="Run button icon"> <tt><b>Play Button</b></tt>. Watch the below carefully.  The rocks should launch in the way we diagramed above.  Also the player should die if they don't move on the second pass of the rock!
+			
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/FirstWaveTimelineInGame.gif" alt="Play game and see first launch of rocks">			
+
+	<p>
+		Let's launch our second wave as soon as the player figures out shooting.  We could either spawn it on the player hitting the shoot button or on a score increase of 10.  Lets do the latter.  Lets plan our second wave:
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/SecondWaveAsteroids.png" alt="Second wave diagram">
+
+	<p>
+		Create a second boolean under the first one in <tt><b>obj_game: Create</b></tt> event script:
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/SecondWaveBoolean.png" alt="Create second boolean in obj_game Create event">
+
+	<p>		
+		Open <tt><b>obj_game: Step</b></tt> event and add the following script to launch two medium asteroids at regular speed: 
+		<h3><tt><b>obj_game: Step</b></tt> Event</h3>
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/SecondWaveStep.png" alt="Launch second wave based on score">
+		
+	<p>
+		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Icon_RunProject.png" alt="Run button icon"> <tt><b>Play Button</b></tt>.   As soon as you shoot the first rock you should see the two rocks enter in the way that we planned it out.  
+		
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Wave2Score.gif" alt="Two rocks enter after first is killed">
+
+	<p>
+		Play the game and look at the score, when should we launch the next wave.  I am feeling that around 220 we should launch our third wave and fourth wave.  Here are the next two waves diagrammed.  Try and sort out what you need to do to get these to launch yourself then check what you do against what comes next.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/ThirdFourthScoreWave.png" alt="Third and fourth wave diagram">
+
+	<p>
+		Add two more booleans to <tt><b>obj_game: Create</b></tt> event for wave 3 and 4:
+		<h3><tt><b>obj_game: Create</b></tt> Event</h3>
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Wave3And4Booleans.png" alt="Booleans for third and fourth wave in obj_game create">
+
+	<p>		
+		Open <tt><b>obj_game: Step</b></tt> event and add the following to the script to launch wave three and four:
+		<h3><tt><b>obj_game: Step</b></tt> event</h3>
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/ThirdAndFourthWave.png" alt="Add script three and four">
+		
+
+	<p>
+		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Icon_RunProject.png" alt="Run button icon"> <tt><b>Play Button</b></tt>.  Start playing the game.  Woops, now that we are scoring more points and there are more rocks we are winning long before it is over:
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/WinTooEarly.png" alt="Run game and see that the game ends too soon">
+
+	<p>
+		Lets count up how many rocks we have.  We are spawning 4 huge asteroids and 6 medium ones.
+
+	<p>
+		Open <tt><b>obj_game: Create</b></tt> event and add a variable to the bottom called <tt><b>win_score</b></tt>.  
+
+	<p>
+		Now each large rocks spawns two medium rocks which then spawn 2 small rocks each.  This adds up to 250 points for each large rock we spawn.  
+
+	<p>
+		A medium rock spawns 2 small rocks so this adds a total of 120 points per medium rock.  Total these all up so you have to destroy all of the rocks to win.
+	
+		<h3><tt><b>obj_game: Create</b></tt> Event</h3>
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/CalculateWinScore.png" alt="Calculate total score and save in variable win_score">
+		
+	<p>
+		Open <tt><b>obj_game: Step</b></tt> event and look to see where we check for our winning score.  Change our hard coded value to the variable <tt><b>win_score</b></tt>. 
+	
+	<h3><tt><b>obj_game: Step</b></tt> event</h3>
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/UnhardCodeWinCondition.png" alt="Check total score in obj_game step event">
+		
+	<p>
+		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH2/Icon_RunProject.png" alt="Run button icon"> <tt><b>Play Button</b></tt>.  Start playing the game.  Now you should be able to play it to the end and you win after killing the last rock!
+
+	<p>
+		<iframe src="https://www.youtube.com/embed/GB62v-hlgcc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
+	<p>
+		That's it all you have to do is craft a MUCH longer experience.  Have fun!
+		
+		
+<br>
+</p>
+<p>
+
+</div>
+
+<div class="footer">
+	<div class="buttons">
+		<div class="clear">
+			<div style="float:left">
+				<a href="page01.html"  class="prev">
+				<div id="button-prev"></div> 
+				</a>
+			</div>
+			<div style="float:right"> <!-- Set the next page to go to here -->
+			<!--	<a href="page04.html" class="next">
+					<div id="button-next"></div>
+				</a>-->
+			</div>
+		</div>	
+	</div>
+<!-- Footer copyright notice - set this to your own or whatever is required (remove the text but leave the <h5> tags to just have the bar) -->
+<h5>&copy; Copyright Mauby Games 2018</h5>
+</div>
+
+</body>
+</html>
+
+
+

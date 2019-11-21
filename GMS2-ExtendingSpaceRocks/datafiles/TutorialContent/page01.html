@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<!-- EDIT THIS-->
+		<title>Tutorial - Extending Space Rocks - Ch1 - Page 1</title>
+		<!-- DO NOT EDIT THIS-->
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="style" charset="UTF-8"/>
+		<script type="text/javascript">
+			var changePage = function(){
+				var newPage = document.getElementById("page-select");
+				window.location.replace(newPage.value);
+				}
+		</script>
+
+	</head>
+
+<!-- EDIT THIS - This section is where you can add an index to your tutorial -->
+<body>
+<!-- EDIT THIS - Your Tutorial title -->
+	<h2 style="border-radius:0.5em 0.5em 0 0; margin:0;">Tutorial - Extending Space Rocks</h2>
+<!-- EDIT THIS - Here you list the pages in your tutorial, with the current one at the top -->
+		<div class="head">
+			<select id="page-select" onChange="changePage()">
+				
+				<optgroup label="Ch1 - Extending Space Rocks">
+					<option value="page01.html"><b>Importing Project Files</b></option>
+					<option value="ch1/page02.html">Add Variables</option>
+					<option value="ch1/page03.html">Add Panache</option>
+					<option value="ch1/page04.html">Add Panache Part I</option>
+					<option value="ch1/page05.html">Add Friction and Max Speed</option>
+				</optgroup>
+				<optgroup label="Ch 2 - Spawning Asteroids">
+					<option value="../ch2/page01.html">Pick Spawn by Time or Score</option>
+					<option value="../ch2/page02.html">Spawn by Time</option>
+					<option value="../ch2/page03.html">Spawn by Score</option>
+				</optgroup>
+			</select>
+		</div>
+	
+<!-- EDIT THIS - Main tutorial body goes here -->
+<div class="body-scroll">
+	<p>
+	If you want to see tutorial in a separate web browser window <a href="gms2tutorials:///openBrowser">click here</a>.
+	
+	<p style="color:rgb(85, 109, 130)">
+	<b>Importing Project Files</b>
+	
+	<p>
+		This tutorial is a follow up to GameMaker's tutorial called <a href ="https://marketplace.yoyogames.com/assets/7423/space-rocks-gml" target="blank">Space Rocks GML</a>.  This tutorial assumes that you have finished this tutorial then takes it a little bit further.  This takes us up to the point where we can improve the syntax, add some fancier elements and add escalation. If you have not completed the <b>Space Rocks GML</b> tutorial in full, stop now and complete the above tutorial.
+		
+	<p>
+		Lets start by importing the assets we created in the Space Rocks tutorial.  This is a way you can also import and share common assets amongst game projects. GameMaker Studio 2 makes it simple to move assets between projects.  So we will learn how to take all the assets from the Space Rocks GML tutorial and import them into this new project.
+
+	<p>
+		<img style="vertical-align:middle" src="images/Icon_RMB.png"> Right click on Rooms and select <tt><b>Add Existing</b></tt> this brings up your operating systems file manager.  Go to the folder that holds the tutorial you have completed.  Look for the rooms folder and import the first room in the list.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingRmEnd.gif" alt="Find First Room">
+
+		<p>
+		Repeat this for the three remaining rooms <img style="vertical-align:middle" src="images/Icon_RMB.png"> by right clicking on Rooms and select <tt><b>Add Existing</b></tt> for each of the three rooms.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Add3ExistingRooms.gif" alt="Import three remaining rooms into this project">
+		
+	<p> 
+		When you import files it also imports files that are associated with them.  So if you open the <tt><b>Objects</b></tt> and <tt><b>Sprites</b></tt> you will see that it added some of them.  Also double check that you have imported all 4 rooms from the previous tutorial:
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/4RoomsAndAssociatedFiles.png" alt="Added files associated with the room">
+	
+	<p>
+		Now look at what game objects you are missing from the original.  I am missing <tt><b>obj_bullet</b></tt>. <img style="vertical-align:middle" src="images/Icon_RMB.png"> Right Click  on <tt><b>Objects</b></tt>> and select <tt><b>Add Existing</b></tt> for <tt><b>obj_bullet</b></tt>.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingObjBullet.gif" alt="Import obj_bullet into this project">
+
+	<p>
+		Add all remaining objects that are missing form the original.  In my project I am still missing <tt><b>obj_debris</b></tt>.  Add all remaining existing objects that are not in your project yet.
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingObjDebris.gif" alt="Add all remaining game objects from previous tutorial">
+
+	<p>
+		Now open the <tt><b>Sprites</b></tt> folder and look to see what sprites might be missing.  It is possible that one, two or three rocks might be missing.  Import all three rocks and any other missing sprites:
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingAllRemainingSprites.gif" alt="Add all rocks from previous project">
+
+	<p>
+		There is a missing font that we used. Import it now:
+	
+	<p>
+	<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingFont.gif" alt="Import font from previous game">
+	
+	<p>
+		The other asset that was added through code is all the audio.  <img style="vertical-align:middle" src="images/Icon_RMB.png"> Right Click  on <tt><b>Sounds</b></tt>> and select <tt><b>Add Existing</b></tt> for all 5 sound files.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddExistingSounds.gif" alt="Import all the audio from the previous project">
+
+	<p>
+		Double check that you have all the original resources from the Space Rocks tutorial.
+
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/EnsureAllResourcesInProject.png" alt="Entire resource list from previous project">
+
+	<p> 
+		Run the game by pressing the <img style="vertical-align:middle" src="images/Icon_RunProject.png"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  It should run exactly the same as it did before. Fix any issues that arise through testing (probably a missing file) and make sure the game runs again as it did originally.
+	<p>
+		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/FullGameImported.gif" alt="Play game and confirm that it is same as before">
+
+	<p>
+		On the next page we will create variables and add comments to the code and review it.
+
+<br>
+</p>
+<p>
+
+</div>
+
+<div class="footer">
+	<div class="buttons">
+		<div class="clear">
+			<div style="float:left"> <!-- Button commented out as we are on the index and can't go back -->
+				<!-- <a href="Chapter_1/page09.html"  class="prev">
+				<div id="button-prev"></div> -->
+				</a>
+			</div>
+			<div style="float:right"> <!-- Set the next page to go to here -->
+				<a href="ch1/page02.html" class="next">
+					<div id="button-next"></div>
+				</a>
+			</div>
+		</div>	
+	</div>
+<!-- Footer copyright notice - set this to your own or whatever is required (remove the text but leave the <h5> tags to just have the bar) -->
+<h5>&copy; Copyright Mauby Games 2018</h5>
+</div>
+
+</body>
+</html>
+
+
+

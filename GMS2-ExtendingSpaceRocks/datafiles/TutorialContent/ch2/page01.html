@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<!-- EDIT THIS-->
+		<title>Tutorial - GameMaker First Look - Ch2 - Page 1</title>
+		<!-- DO NOT EDIT THIS-->
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<link rel="stylesheet" href="../style.css" type="text/css" media="screen" title="style" charset="UTF-8"/>
+		<script type="text/javascript">
+			var changePage = function(){
+				var newPage = document.getElementById("page-select");
+				window.location.replace(newPage.value);
+				}
+		</script>
+
+	</head>
+
+<!-- EDIT THIS - This section is where you can add an index to your tutorial -->
+<body>
+<!-- EDIT THIS - Your Tutorial title -->
+	<h2 style="border-radius:0.5em 0.5em 0 0; margin:0;">Tutorial - First Look</h2>
+<!-- EDIT THIS - Here you list the pages in your tutorial, with the current one at the top -->
+		<div class="head">
+			<select id="page-select" onChange="changePage()">
+				
+				<optgroup label="Ch 2 - Spawning Asteroids">
+					<option value="page01.html">Pick Spawn by Time or Score</option>
+					<option value="page02.html">Spawn by Time</option>
+					<option value="page03.html">Spawn by Score</option>
+				</optgroup>
+				<optgroup label="---Previous Pages">
+					<optgroup label="CH2 - Extending Space Rocks">
+					<option value="../page01.html"><b>Importing Project Files</b></option>
+					<option value="../CH2/page02.html">Variables</option>
+					<option value="../CH2/page03.html">Add Panache Part I</option>
+					<option value="../CH2/page04.html">Add Panache Part II</option>
+					<option value="../CH2/page05.html">Add Friction and Max Speed</option>
+				</optgroup>
+	
+				</optgroup>
+			</select>
+		</div>
+	
+<!-- EDIT THIS - Main tutorial body goes here -->
+<div class="body-scroll">
+	<p>
+	If you want to see tutorial in a separate web browser window <a href="gms2tutorials:///openBrowser">click here</a>.
+	
+	<p style="color:rgb(85, 109, 130)">
+	<b>Pick Spawn by Time or Score</b>
+	
+	<p>
+		We want to be able to craft an experience for the player.  The experience needs to be as interesting as we can make it and I have a preference for deterministic games.  A deterministic game would be one where if I do the same action I will get the same result.  I can learn from this system with practice as it is predictive.  This means that I can try different tactics because it always responds in a consistent manner. 
+
+	<p>
+		I prefer the designer crafts an experience for the player intentionally.  So we have a few elements we can control:
+
+		<ul>
+		<li>Speed of the player</li>
+		<li>Speed of the bullet</li>
+		<li>Collision volume size</li>
+		<li>Where and when rocks are launched</li>
+		<li>Speed of rocks being launched</li>
+		</ul>
+
+	<p>
+		These are all the parameters we can affect to alter the game experience.  There are two approaches that I suggest you take (a third approach would be a hibrid which is beyond the scope of this tutorial).  The first is a time based approach.  Every so often we will launch waves of rocks at the player.  You will start slowly and build intensity over time building in escalation in difficulty through the spawning of rocks.
+
+	<p>
+		The other approach is by score.  So you will launch rocks based on the current score.  There is a certain built in gameplay tension model as the better the player does the more than game throws at them.  There is a nice symettry with this approach.  You need to pick one as we have all the technology we need to proceed.  So pick  <a href="page02.html">Spawn By Time</a> or <a href="page03.html">Spawn By Score</a>
+
+		</div>
+
+<br>
+</p>
+<p>
+
+</div>
+
+<div class="footer">
+	<div class="buttons">
+		<div class="clear">
+			<div style="float:left">
+				<a href="../CH2/page03.html"  class="prev">
+				<div id="button-prev"></div> 
+				</a>
+			</div>
+			<div style="float:right"> <!-- Set the next page to go to here -->
+				<a href="page02.html" class="next">
+					<div id="button-next"></div>
+				</a>
+			</div>
+		</div>	
+	</div>
+<!-- Footer copyright notice - set this to your own or whatever is required (remove the text but leave the <h5> tags to just have the bar) -->
+<h5>&copy; Copyright Mauby Games 2018</h5>
+</div>
+
+</body>
+</html>
+
+
+
