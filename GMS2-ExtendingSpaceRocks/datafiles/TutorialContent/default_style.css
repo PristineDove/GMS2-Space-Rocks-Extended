@@ -355,7 +355,7 @@ iframe{
 #button-next {
 	width: 73px;
 	height: 23px;
-	background: url('images/Buttons.png') no-repeat scroll -146px -23px;
+	background: url('http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Buttons.png') no-repeat scroll -146px -23px;
 	}
 #button-next:hover {
        background-position: -73px -23px;
@@ -367,7 +367,7 @@ iframe{
 #button-prev {
 	width: 73px;
 	height: 23px;
-	background: url('images/Buttons.png') no-repeat scroll -146px 0px;
+	background: url('ttp://marcaubanel.com/gamemaker/GMS2-Images/Shared/Buttons.png') no-repeat scroll -146px 0px;
 	}
 #button-prev:hover {
        background-position: -73px 0px;

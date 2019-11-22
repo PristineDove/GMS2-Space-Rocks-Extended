@@ -74,13 +74,13 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/RecenterOriginSprShip.png" alt="Recenter origin on resized ship">
 
 	<p> 
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The ship should now fit into the game window a bit better (at least this is my personal opinion).
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The ship should now fit into the game window a bit better (at least this is my personal opinion).
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/SixteenPixelShip.gif" alt="Play game and look at new ship size">
 
 	<p> 
-		Double <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png" alt="Left mouse button illustration"> left click <tt><b>spr_ship</b></tt> and in the menu above right click on the ship icon.  Select <tt><b>copy</b></tt> and <tt><b>paste</b></tt> to add another frame to the ship.
+		Double <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png" alt="Left mouse button illustration"> left click <tt><b>spr_ship</b></tt> and in the menu above right click on the ship icon.  Select <tt><b>copy</b></tt> and <tt><b>paste</b></tt> to add another frame to the ship.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddFlameFameInShip.png" alt="An second frame to spr_ship">
@@ -92,7 +92,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddFlameToFrame0.png" alt="Add flame">		
 		
 	<p> 
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame is really hard to see but it is flashing on and off.  We want it on when we are accelerating and off the rest of the time.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame is really hard to see but it is flashing on and off.  We want it on when we are accelerating and off the rest of the time.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/FlashingFlameTooSmall.gif" alt="Play game, notice that flame is hard to see?">		
@@ -110,7 +110,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/TurnShipFlameOnOff.png" alt="Add image_index change when accelerating to obj_ship step event">		
 
 		<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame that is still hard to see now turns on and off with acceleration.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame that is still hard to see now turns on and off with acceleration.
 		
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/SmallFlameShipOnOff.gif" alt="Run game and see flame turn on and off">
@@ -128,7 +128,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/DrawBackFlameSprite.jpg" alt="Combine two sprites one of ship and one of flame to look like one">
 
 	<p>
-		So we will need to figure out where to draw the sprite.  Lets look at the top left and bottom left of our flame in the y axis.  We can start drawing on the right hand side of the sprite.  The editor can help us here.  <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png" alt="Left mouse button illustration"> Double left click and open <tt><b>spr_ship</b></tt> and press the <tt><b>Edit Image</b></tt> button. Select the pen tool and hover over the top left corner.
+		So we will need to figure out where to draw the sprite.  Lets look at the top left and bottom left of our flame in the y axis.  We can start drawing on the right hand side of the sprite.  The editor can help us here.  <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png" alt="Left mouse button illustration"> Double left click and open <tt><b>spr_ship</b></tt> and press the <tt><b>Edit Image</b></tt> button. Select the pen tool and hover over the top left corner.
 
 	<p>
 		At the bottom corner of the screen we see the (x,y) position of the cursor.  In my case it is <tt><b>3</b></tt> on the y axis of this sprite.
@@ -149,7 +149,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/BottomLeftY.png" alt="Show top left corner y position of flame">
 
 	<p>
-		<img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RMB.png" alt="Right button illustration"> Right click on <tt><b>Sprite</b></tt> in the <tt><b>Resource</b></tt> menu.  Call it <tt><b>spr_ship_flame</b></tt>.  Change the scale of the sprite by <tt><b>16</b></tt> by <tt><b>16</b></tt>.  
+		<img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RMB.png" alt="Right button illustration"> Right click on <tt><b>Sprite</b></tt> in the <tt><b>Resource</b></tt> menu.  Call it <tt><b>spr_ship_flame</b></tt>.  Change the scale of the sprite by <tt><b>16</b></tt> by <tt><b>16</b></tt>.  
 		
 	<p>
 		Press the <tt><b>Edit Sprite</b></tt> button and select the flame color and the pencil tool.  Put a dot at the top right corner (in my case at 3 on the y) and then the bottom (in my case 12 on the y) then fill inbetween.  Work your way to taper the flame to the left to your liking.
@@ -164,7 +164,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/CenterFlameOrigin.png" alt="Center origin of sprite">
 
 	<p>
-		Now <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RMB.png" alt="Right button illustration"> right click on <tt><b>Objects</b></tt> and select <tt><b>Create Object</b></tt>.  Call it <tt><b>obj_ship_flame</b></tt> and assign the <tt><b>spr_ship_flame</b></tt>.
+		Now <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RMB.png" alt="Right button illustration"> right click on <tt><b>Objects</b></tt> and select <tt><b>Create Object</b></tt>.  Call it <tt><b>obj_ship_flame</b></tt> and assign the <tt><b>spr_ship_flame</b></tt>.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ObjShipFlame.png" alt="Create obj_ship_flame and add spr_ship_flame to the sprite component">
@@ -179,6 +179,9 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/HowToPositionBackFlame.png" alt="Illustrate the angle and amount flame needs to be behind ship sprite">
 
 	<p>
+		Add a <tt><b>Step Event</b></tt> to <tt>obj_ship_flame</tt>. 
+
+		<p>
 		First we need to rotate the <tt><b>obj_ship_flame</b></tt> to match the <tt><b>image_angle</b></tt> of <tt><b>obj_ship</b></tt>.  Since we are in the namespace of <tt><b>obj_ship_flame</b></tt> how do we see a variable in another object?
 
 	<p>
@@ -208,7 +211,7 @@
 
 		
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame is following and is always on.  We will fix that shortly.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame is following and is always on.  We will fix that shortly.
 		
 	<p>
 		If you get a crash when you hit a rock, don't worry, we will be fixing this as well.

@@ -56,13 +56,13 @@
 		This means that the step event is looking at the old position of the obj_ship when it is dot referencing it.  Now how do we access it after it is in it's new position?  This is why we have different <tt><b>Step</b></tt> event types.
 	
 	<p>	
-		Change <tt><b>obj_ship_flame</b></tt> to a <tt><b>Step | End Step</b></tt> to where the ship will be in its new position so it will match its current position. <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RMB.png" alt="Right mouse button illustration"> Right click on <tt><b>obj_ship_flame</b></tt>  and select <tt><b>Change Event</b></tt> and pick <tt><b>Step | End Step</b></tt>.
+		Change <tt><b>obj_ship_flame</b></tt> to a <tt><b>Step | End Step</b></tt> to where the ship will be in its new position so it will match its current position. <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RMB.png" alt="Right mouse button illustration"> Right click on <tt><b>obj_ship_flame</b></tt>  and select <tt><b>Change Event</b></tt> and pick <tt><b>Step | End Step</b></tt>.
 		<h3><tt><b>obj_ship_flame</b></tt></h3>
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ChangeStepToEndStep.gif" alt="Change obj_ship_flame step event to a end step event">
 
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame <b>now</b> follows the ship perfectly! Again, if you get a crash when you hit a rock, don't worry, we will be fixing this shortly. The bit of a graphic glitch is the red turning on and off on the ship sprite.  Now lets turn the flame off when you are not accelerating.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame <b>now</b> follows the ship perfectly! Again, if you get a crash when you hit a rock, don't worry, we will be fixing this shortly. The bit of a graphic glitch is the red turning on and off on the ship sprite.  Now lets turn the flame off when you are not accelerating.
 		
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/EndStepFix.gif" alt="Run game and see flame follows ship perfecxtly">
@@ -74,7 +74,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/TurnImageAlphaOnOffFlame.png" alt="Turn image index off on flame when not accelerating">
 
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame iis now turning off and on.  Lets now fix our crash bug.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> in the top menu bar to launch the game.  The flame iis now turning off and on.  Lets now fix our crash bug.
 		
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ShipFliesWIthFlamesButCrashes.gif" alt="Run game and second flame turn on and off properly">
@@ -106,7 +106,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/CheckIfObjShipExists.png" alt="Enter second line with mathematical operation">	
 
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now the game is back to normal.  Play it and make sure you can lose, win and restart the game.  Everything should be back to normal.
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now the game is back to normal.  Play it and make sure you can lose, win and restart the game.  Everything should be back to normal.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ShipWithFlameNoCrash.gif" alt="Play game crash bug in flame of when ship hits rock is fixed">		
@@ -135,13 +135,13 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/FillNewShape.png" alt="Fill line with white pixels">		
 
 	<p>
-		<img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png" alt="Left mouse button illustration"> Double click <tt><b>obj_ship_explode</b></tt> and assign the new <tt><b>spr_ship_explode</b></tt> sprite you just created.
+		<img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png" alt="Left mouse button illustration"> Double click <tt><b>obj_ship_explode</b></tt> and assign the new <tt><b>spr_ship_explode</b></tt> sprite you just created.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AssignShipExplodeSprite.png" alt="Assign spr_ship_explode to obj_ship_explode game object">		
 
 	<p>
-		<img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png" alt="Left mouse button illustration"> Double click <tt><b>obj_ship_explode: Step</b></tt> script and add a rotation to the line:
+		<img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png" alt="Left mouse button illustration"> Double click <tt><b>obj_ship_explode: Step</b></tt> script and add a rotation to the line:
 		<h3><tt><b>obj_ship_explode: Step</b></tt></h3>
 
 	<p>
@@ -155,7 +155,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddShipExplosionToShipObject.png" alt="Add delay and rotate explosion in obj_ship">		
 
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now the ship should explode nicely.  
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now the ship should explode nicely.  
 		
 	<p>
 		At first glance this all looks good.  But in games every change can alter the design and create an unexpected bug or annoyance.  Our change works very well <b>until</b> our final death, and it goes to the you lose screen before the animation finishes.  Lets fix this next.
@@ -166,7 +166,7 @@
 	<p>
 		What we need to do is add two alarms to delay dying or winning.  Open <tt><b>obj_game: Step</b></tt> event and remove the two <tt><b>room_goto(room)</b></tt> functions, as we will move these to alarms.  Press the <bb><b>Add Event</b></bb> button and select <tt><b>Alarm | Alarm2</b></tt> the press <bb><b>Add Event</b></bb> button again and select <tt><b>Alarm | Alarm3</b></tt>
 
-	<p> Now we can't just call the alarm with <tt><b>alarm[2] = room_speed * 3.5</b></tt>.  Becuse every frame this alarm will get recalled and it will never get set.  Imagine you resetting your alarm to so many seconds in the future every second.  It will never ring.  We can first check to see if the alarm is set by looking to see if there is a positive number assigned to it.  If so it will not run again.  
+	<p> Now we can't just call the alarm with <tt><b>alarm[2] = room_speed * 3.5</b></tt>.  Because every frame this alarm will get recalled and it will never get set.  Imagine you resetting your alarm to so many seconds in the future every second.  It will never ring.  We can first check to see if the alarm is set by looking to see if there is a positive number assigned to it.  If so it will not run again.  
 
 	<p>
 		The <tt><b>!</b></tt> is a logical operator <b>not</b>.  This means that it inverts a boolean so false is true or true is now false.  In this case we are checking to see if the alarm is NOT set:
@@ -176,24 +176,25 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/CallAlarmForDyingOrWinning.png" alt="Check to see if alarm is not set then set it">	
 
 	<p>
-		Open <tt><b>Alarm2</b></tt> and move the room change for winning here:
+		Add an <tt><b>Alarm2 Event</b></tt> and move the room change for winning here:
 		<h3><tt><b>obj_game: Alarm2</b></tt></h3> Event
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/RmWinAlarm2.png" alt="Change to win room in alarm2 event">	
 
 	<p>
-		Open <tt><b>Alarm3</b></tt> and move the room change for losing here:
+		Add an <tt><b>Alarm3 Event</b></tt> and move the room change for losing here:
 		<h3><tt><b>obj_game: Alarm3</b></tt></h3> Event
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/RmWinAlarm3.png" alt="Change to lose screen in alarm 3 event">	
 		
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now there should be a delay for winning and losing.  Check both cases!  
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and now there should be a delay for winning and losing.  Check both cases!  
 		
 	<p>
-		Now this change has introduced a new bug.  Notice that the sound plays multiple times for winning or losing. Lets force it to play once by ensuring that it only plays if the alarm is not set (before we set it) guaranteeing one play:
+		Now this change has introduced a new bug.  Notice that the sound plays multiple times for winning or losing. Lets force it to play once by ensuring that it only plays if the alarm is not set (before we set it) guaranteeing one play.  Open up:
+		<h3><tt><b>obj_game: Step</b></tt> Event</h3>
 
 
 	<p>
@@ -245,7 +246,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/OnlyCollideIfInGame.png" alt="Wrap obj_ship collision in a state check condition">	
 	
 	<p>
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and check the winning state. I feel it works a lot better now!
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png" alt="Play button"> <tt><b>Play Button</b></tt> and check the winning state. I feel it works a lot better now!
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ProperWinFlowWithPlayerState.gif" alt="Win state works properly">		

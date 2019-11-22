@@ -40,7 +40,7 @@ h2 {
 	padding:0 0 0 0.5em;
 	line-height:40px;
 	font-weight:bold;
-    background-image: url(Light_Skin/Header_Bar_Front.png), url(Light_Skin/Header_Bar_Back.gif);
+    background-image: url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Header_Bar_Front.png), url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Header_Bar_Back.gif);
     background-position: left, left;
     background-repeat: no-repeat, repeat;
 	border-radius:0.5em 0.5em 0 0;
@@ -326,14 +326,14 @@ a:hover, a:active{
 .collapse{
 	display:block;
 	background-colour:#8c8f98;
-	background-image:url(Light_Skin/Pointer_Closed.png);
+	background-image:url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Pointer_Closed.png);
 	background-repeat: no-repeat;
 	background-position:10px center;
 	padding-left:35px;
 }
 
 .collapse:hover{
-	background-image:url(Light_Skin/Pointer_Open.png);
+	background-image:url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Pointer_Open.png);
 	/*text-decoration: underline;*/
 }
 
@@ -362,7 +362,7 @@ iframe{
 #button-next {
 	width: 73px;
 	height: 23px;
-	background: url('Light_Skin/Buttons.png') no-repeat scroll -146px -23px;
+	background: url('http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Buttons.png') no-repeat scroll -146px -23px;
 	}
 #button-next:hover {
        background-position: -73px -23px;
@@ -374,7 +374,7 @@ iframe{
 #button-prev {
 	width: 73px;
 	height: 23px;
-	background: url('Light_Skin/Buttons.png') no-repeat scroll -146px 0px;
+	background: url('http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Buttons.png') no-repeat scroll -146px 0px;
 	}
 #button-prev:hover {
        background-position: -73px 0px;
@@ -388,7 +388,7 @@ iframe{
 	margin-right: auto;
 	width: 219px;
 	height: 32px;
-	background: url('Light_Skin/MoreTutorialsButton.png') no-repeat scroll 0px 0px;
+	background: url('http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/MoreTutorialsButton.png') no-repeat scroll 0px 0px;
 	}
 #tutorial-button:hover {
        background-position: 0px -32px;
@@ -477,7 +477,7 @@ iframe{
 
 ::-webkit-scrollbar-button:start:decrement:vertical {
 	background-color: #c7c7c7;
-	background-image: url(Light_Skin/Scrollbar_Buttons.png);
+	background-image: url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Scrollbar_Buttons.png);
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	height: 14px;
@@ -491,7 +491,7 @@ iframe{
 
 ::-webkit-scrollbar-button:end:increment:vertical  {
 	background-color: #c7c7c7;
-	background-image: url(Light_Skin/Scrollbar_Buttons.png);
+	background-image: url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Scrollbar_Buttons.png);
 	background-repeat: no-repeat;
 	background-position: 0px -14px;
 	height: 14px;
@@ -505,7 +505,7 @@ iframe{
 
 ::-webkit-scrollbar-button:start:decrement:horizontal {
 	background-color: #c7c7c7;
-	background-image: url(Light_Skin/Scrollbar_Buttons.png);
+	background-image: url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Scrollbar_Buttons.png);
 	background-repeat: no-repeat;
 	background-position: -28px 0px;
 	height: 14px;
@@ -519,7 +519,7 @@ iframe{
 
 ::-webkit-scrollbar-button:end:increment:horizontal  {
 	background-color: #c7c7c7;
-	background-image: url(Light_Skin/Scrollbar_Buttons.png);
+	background-image: url(http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Light_Skin/Scrollbar_Buttons.png);
 	background-repeat: no-repeat;
 	background-position: -42px -0px;
 	height: 14px;

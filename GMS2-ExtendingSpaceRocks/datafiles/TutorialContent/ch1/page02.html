@@ -55,7 +55,7 @@
 		Lets convert the variables from hard coded numbers into variables and add some comments before we move forward and continue with the game.  Please note that <b>NONE</b> of what we do on this page will change the game.  Please run the game and each step and test it thoroughly to make sure you didn't introduce a new bug. We want to change hard coded numbers to variables to make it easier to tune the game and <a href="https://en.wikipedia.org/wiki/Code_refactoring" target="_blank">refactor the code </a> when we make changes.
 
 	<p>
-		<img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png"> Double left click on <tt><b>obj_ship</b></tt> and <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_LMB.png"> double left click the <tt><b>step</b></tt> event and look at the top.  We have the number <tt><b>5</b></tt> that represents the delta change in degrees per frame.
+		<img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png"> Double left click on <tt><b>obj_ship</b></tt> and <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_LMB.png"> double left click the <tt><b>step</b></tt> event and look at the top.  We have the number <tt><b>5</b></tt> that represents the delta change in degrees per frame.
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/RotationSpeedChangeToVariable.png" alt="hard coded change in degrees for turning ship">
@@ -64,7 +64,7 @@
 		There are two places we can initialize a new variable.  We can press <tt><b>Variable Definitions</b></tt> on the object tab or we can add it in the <tt><b>Create</b></tt> event (or we can do it in both, the Variable Definitions in the level will run after the Create event and will be the one that is used).  The advantage of defining it in variable definitions is you can have separate variables per instance which we can't do as easily inside the <tt><b>Create</b></tt> event.  
 		
 	<p>	
-		Since there will always be only one ship we don't need to create it in variable definitions.  A a comment and the below new variable in
+		Open up <tt>obj_ship</tt> and add a <tt>Create Event</tt>. Since there will always be only one ship we don't need to create it in variable definitions.  A a comment and the below new variable in
 		<h3><tt>obj_ship: Create</tt></h3> 
 
 	<p>
@@ -80,7 +80,7 @@
 	<p>
 
 	<p> 
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
 
 	<p> 
 		Also look at line 17 where we use the <tt><b>motion_add(angle, amnt)</b></tt> function to accelerate the ship.  Let's also replace in the next step the 0.5 into a variable.
@@ -100,7 +100,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/AddAccelerationToStep.png" alt="Add acceleration varialbe to motion_add in step event">
 	
 		<p> 
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
 
 	<p>
 		Add a comment above the shooting of bullets.  
@@ -123,7 +123,7 @@
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ShootBulletSpriteWidthMult.png" alt="Add half_sprite_width variable to step event inside">
 
 	<p> 
-		Run the game by pressing the <img style="vertical-align:middle" src="../http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
+		Run the game by pressing the <img style="vertical-align:middle" src="http://marcaubanel.com/gamemaker/GMS2-Images/Shared/Icon_RunProject.png"> <tt><b>Play Button</b></tt> and make sure that nothing has changed.  Make sure to test your work!
 
 	<p>
 		Add comments to the final <tt><b>obj_ship</b></tt> event script:
