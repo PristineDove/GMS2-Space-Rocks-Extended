@@ -1,13 +1,13 @@
 # Two GameMaker Studio Walk Throughs
 
 ## Introduction
-There are two folders with two GameMaker studio walk throughs. The first **Space Rocks - GML Tutorial** is the free tutorial available at [YoYo Games Marketplace](https://marketplace.yoyogames.com/assets/7423/space-rocks-gml).  This beginner tutorial teaches you how to make a simplified version of Asteroids.  It uses GameMaker's GML programming language.
+This is a follow up from [GMS2 First Look](https://github.com/maubanel/GMS2-First_Look) and is meant as a follow up/companion to **Space Rocks - GML Tutorial** which is a freely available tutorial at [YoYo Games Marketplace](https://marketplace.yoyogames.com/assets/7423/space-rocks-gml).  This beginner tutorial teaches you how to make a simplified version of Asteroids.  It uses GameMaker's GML programming language.
 
-The second tutorial is a follow up and can be found in the **GMS2-ExtendedSpaceRocks** folder.  It is a follow up that I wrote that takes it a little bit further.  It still leaves lots of room to add a completed game.  It is meant as a starting point and not a finished game.  I expect you to finish the level design and add any functionality you please.
+The extended tutorial is a follow up to creating a structure where the developer can create escalation in diificulty. It is meant as a starting point and not a finished game! 
 
 In this tutorial:
 
-* Importing assets from other projects
+* Import assets from other projects
 * Add variables and comments to all scripts without changing functionality
 * Resize ship 
 * Add flame behind ship when accelerating
