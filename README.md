@@ -45,6 +45,54 @@ The following programming concepts are raised in GMS2-ExtendingSpaceRocks.yyp.
 
 
 
+GameMaker Resources
+
+Sounds
+Scripts
+Font
+
+Algorythm
+Game Controller
+
+GameMaker Events
+Alarm
+Room Start
+Collision
+Outside Room
+End Step
+
+GameMaker Functions
+draw_set_font(font);
+audio_is_playing
+audio_stop_sound
+audio_play_sound
+draw_text_transformed_colour
+room_goto(room)
+instance_create_layer(x, y, layer, object)
+instance_exists()
+keyboard_check_pressed
+choose(arg0, art1…)
+irandom_range
+repeat
+clamp
+instance_destroy
+motion_add(direction, speed)
+
+User Created Function (supplied)
+scr_spawn_asteroid
+
+GameMaker Variables:
+alarm[n]
+score
+room_speed
+lives
+image_alpha
+image_index
+sprite_index
+
+GamdMaker Constants
+vk_space
+
 motion_add(direction, speed);
 instance_destroy()
 instance_create_layer()
