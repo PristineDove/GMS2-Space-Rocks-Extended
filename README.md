@@ -32,9 +32,11 @@ The infrastructure for the  following game design concept is introduced in this 
 | Escalation          | A positive feedback loop in which the game gets more difficult the closer the player gets to the goal.  This is often combined with risk/reward scenarios which allows for faster completion but with greater risk to the player. Escalation allows the designer to slow down better players by escalating the difficulty faster, slowing the  player's progression through the level.  This can be achieved through various means but common ones are speed (Pac Man ghosts speed up as level progresses), increase in number of enemies or objects you need to deal with (tetris has more falling shapes) or aggressiveness of the attack.  It is good to model in breaks so that there are peaks and rest periods in the level driving the player to completion.      |
 
 ## Programming Concepts
-The following programming concepts are raised in FirstLook.yyp.
+The following programming concepts are raised in GMS2-ExtendingSpaceRocks.yyp.
 
-
+| Programming Concept | Description                                                                                            | Example                                                                                                                                                                                                                                             |
+|---------------------|--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| switch statement    | It is a type of control statement that controls flow and acts like an if - else if - else statement.   | switch (age) <br>{    <br>   case (18): <br>   draw_text(x, y, "adult");<br>   break;<br><br><br>   case(12): <br>   draw_text(x, y, "twelve years old");<br>   break; <br><br>   case(5):<br>   draw_text(x, y, "5 years old");<br>   break; <br>} |
 motion_add(direction, speed);
 instance_destroy()
 instance_create_layer()
