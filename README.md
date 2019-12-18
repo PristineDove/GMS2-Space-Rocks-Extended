@@ -1,4 +1,4 @@
-# Two GameMaker Studio Walk Throughs
+# Space Rocks Extended
 
 ## Introduction
 This is a follow up from [GMS2 First Look](https://github.com/maubanel/GMS2-First_Look) and is meant as a follow up/companion to **Space Rocks - GML Tutorial** which is a freely available tutorial at [YoYo Games Marketplace](https://marketplace.yoyogames.com/assets/7423/space-rocks-gml).  This beginner tutorial teaches you how to make a simplified version of Asteroids.  It uses GameMaker's GML programming language.
