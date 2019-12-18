@@ -55,7 +55,19 @@ GameMaker Resources. Here are the new GameMaker resources that are introduced in
 | Scripts             | Scripts are away to simplify and shorten event based scripts (like step events in a game object).  This makes the code easier to maintain and can make it more reusable.  These scripts acts like functions in other programming languages and can take parameters and return values.                                                                       |
 | Fonts               | This allows you to select a font that is already available on your computer to be added to the game. Please note that for the editor the font needs to be loaded in the computer already to show up.  So you need to make sure this font is installed on all computers that are working on the game.  A build of the game on its own will include the font. |
 
+## Built in Object Variables
 
+GameMaker objects all share common built in variables. Here are the ones that are important to this exercise. Here are the new Built-In Variables that are introduced in this second walk through.
+
+
+GameMaker Variables:
+alarm[n]
+score
+room_speed
+lives
+image_alpha
+image_index
+sprite_index
 Algorythm
 Game Controller
 
@@ -86,14 +98,7 @@ motion_add(direction, speed)
 User Created Function (supplied)
 scr_spawn_asteroid
 
-GameMaker Variables:
-alarm[n]
-score
-room_speed
-lives
-image_alpha
-image_index
-sprite_index
+
 
 GamdMaker Constants
 vk_space
