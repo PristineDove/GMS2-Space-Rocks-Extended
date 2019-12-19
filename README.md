@@ -68,14 +68,18 @@ GameMaker objects all share common built in variables. Here are the ones that ar
 | image_index               | This is an integer that refers to which frame of a sprite the game is displaying.  The first frame in a sprite is `image_index` of `0`. Each subsequent sprite goes up by 1.                                                                                                                                                             | `image_index=0;`                       |
 | sprite_index              | This refers to which sprite the game object embeds.  For a player animation you might need to change sprites for different directions of movement.  You assign the name of the sprite that you use.                                                                                                                                      | `sprite_index=spr_player_right;`       |
 
-GameMaker Variables:
-alarm[n]
-score
-room_speed
-lives
-image_alpha
-image_index
-sprite_index
+## GameMaker Constants
+These are non changing variable names that cannot be changed. They show up in gamemaker as a red font.  Here are the new Game-Maker constants that are introduced in this second walk through.
+
+| GameMaker Constants | Description              | Example                              |
+|---------------------|--------------------------|--------------------------------------|
+| c_lime              | Draw color of lime.      | `draw_set_color(c_lime);`            |
+| c_red               | Draw color of red.       | `draw_set_color(c_red);`             |
+| vk_space            | Spacebar on the keyboard | `if(keyboard_check(vk_space)){...;}` |
+
+
+
+
 Algorythm
 Game Controller
 
@@ -102,6 +106,8 @@ repeat
 clamp
 instance_destroy
 motion_add(direction, speed)
+length_dir_x()
+length_dir_y()
 
 User Created Function (supplied)
 scr_spawn_asteroid
@@ -109,7 +115,7 @@ scr_spawn_asteroid
 
 
 GamdMaker Constants
-vk_space
+
 
 motion_add(direction, speed);
 instance_destroy()
