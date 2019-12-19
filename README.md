@@ -131,22 +131,10 @@ scr_spawn_asteroid
 GamdMaker Constants
 
 
-motion_add(direction, speed);
-instance_destroy()
+
 instance_create_layer()
-irandom_range(start, end)
-chosse()
-draw_text_transformed_color()
-instance_exists()
-clamp()
-
-
-@"string"
 
 exit;
-switch statements
 
-alarm[]
-score
-lives
-sprite_index
+
+
