@@ -114,26 +114,11 @@ These are the functions that GameMaker provides that we used in this exercise.  
 Algorythm
 Game Controller
 
-GameMaker Events
-Alarm
-Room Start
-Collision
-Outside Room
-End Step
-
 
 
 User Created Function (supplied)
 scr_spawn_asteroid
-
-
-
-GamdMaker Constants
-
-
-
 instance_create_layer()
-
 exit;
 
 
