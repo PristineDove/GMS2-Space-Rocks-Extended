@@ -66,6 +66,9 @@ GameMaker can only run scripts on given events. The below are the most common ev
 | Collision        | A collision is set between the calling object and another object class that it is colliding with.                                                                                                                                                                                                                                                      |
 | Outside Room     | This script runs when an object leaves a room.  It is common to destroy the object when it leaves the game space.                                                                                                                                                                                                                                      |
 | End Step         | Each event runs in a specific order. Sometimes we want to perform an operation or check when all the objects are processed and in their new position and rotation in the room.  Please note that the new location of an object set with 1`speed`, `direction`, `vspeed` or `hspeed` is done between the regular `step` event and the `end step` event. |                                                                  |
+| Exit       | "Exit" simply ends the execution of the current script or event. This is similar to returning null in other programming languages |                                                                  |
+
+"Exit" simply ends the execution of the current script or event. 
 
 ## Built in Object Variables
 
@@ -117,18 +120,11 @@ Here are new functions that were provided for you with this walk through.
 
 | User Created Functions                                                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Example                                                                                       |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| scr_spawn_asteroid(asteroid_sprite, x_pos, y_pos, speed_multiplier, angle)                                                                      | This function spawns an asteroid outside the room.  `asteroid_sprite` has to be `spr_asteroid_huge`, `spr_asteroid_small` or `spr_asteroid_med`. An error is thrown if another sprite is passed to this function. The `x_pos` and `y_pos` is a normalized value between `0` and `1`. `0` and `1` are just outside the room and a fraction inbetween positions it between the left and right side of the view (on `x_pos`) and between top and bottom view (`y_pos`).  If both numbers are fractional, it will throw an error as the rock needs to be spawned off screen to avoid it popping in. The `speed_multiplier` increases or decreases the base speed of the asteroid.  The `angle` determines what direction the asteroid is moving in.                                                                                                                                                                                                                                                                                                                                                       | `spr_spawn_asteroid(spr_asteroid_small, 0, .5, 1.5, 225);`    
+| scr_spawn_asteroid(asteroid_sprite, x_pos, y_pos, speed_multiplier, angle)                                                                      | This function spawns an asteroid outside the room.  `asteroid_sprite` has to be `spr_asteroid_huge`, `spr_asteroid_small` or `spr_asteroid_med`. An error is thrown if another sprite is passed to this function. The `x_pos` and `y_pos` is a normalized value between `0` and `1`. `0` and `1` are just outside the room and a fraction inbetween positions it between the left and right side of the view (on `x_pos`) and between top and bottom view (`y_pos`).  If both numbers are fractional, it will throw an error as the rock needs to be spawned off screen to avoid it popping in. The `speed_multiplier` increases or decreases the base speed of the asteroid.  The `angle` determines what direction the asteroid is moving in.                                                                                                                                                                                                                                                                                                                                                       | `spr_spawn_asteroid (spr_asteroid_small, 0, .5, 1.5, 225);`    
 
+## Algorithm(s)
+Game Controller.  This is a singleton pattern where we have a game object that is usually set to `persistent` so that it exists from the very beginning to the very end of the game.  It should contain all the variables that are needed for reloading the game at the given point and state.  It usually keeps track of score and health and all other variables that matter to the game.
 
-Algorythm
-Game Controller
-
-
-
-User Created Function (supplied)
-scr_spawn_asteroid
-instance_create_layer()
-exit;
 
 
 
