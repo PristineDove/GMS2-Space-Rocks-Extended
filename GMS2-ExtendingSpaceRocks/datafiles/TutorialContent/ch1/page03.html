@@ -198,7 +198,7 @@
 			Click on these links to see how they work.  Each one takes a <tt><b>len</b></tt> (length in pixels) and a <tt><b>dir</b></tt> (angle in degrees).  They each return the x or y component of the position of that point on screen. They are essentially converting from the Polar Coordinate system to the Cartesian Coordinate system.  We take an angle and a magnitude and add our current position to get the new one.  In code it looks like:
 	<p class = "code">
 		x = lengthdir_x(sprite_width, image_angle - 180) + obj_ship.x;
-		y = lengthdir_x(sprite_width, image_angle - 180) + obj_ship.y;
+		y = lengthdir_y(sprite_width, image_angle - 180) + obj_ship.y;
 
 	<p>
 		<img class="center" src="http://marcaubanel.com/gamemaker/GMS2-Images/Extending-Space-Rocks/CH1/ConvertToCartesian.png" alt="Show conversion from polar to cateresian in flame">
